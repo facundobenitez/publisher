@@ -4244,7 +4244,6 @@
 	  _createClass(CreateTask, [{
 	    key: 'handleOnSaveClick',
 	    value: function handleOnSaveClick(event) {
-	      alert('Hello');
 	      _TaskManager2.default.createTasks(this.refs.posts.state.selectedPosts, this.refs.groups.state.selectedGroups, this.refs.frecuency.state.hours);
 	    }
 	  }, {
@@ -40440,7 +40439,7 @@
 	      }).then(function (response) {
 	        return response.json();
 	      }).then(function (json) {
-	        alert('Saved!');
+	        console.log('Saved new task');
 	      }).catch(function (error) {
 	        alert(error);
 	      });
@@ -41024,7 +41023,7 @@
 	    value: function getPost(postId) {
 	      //DANA
 	      var promise = new Promise(function (resolve, reject) {
-	        fetch('http://localhost:3000/posts/' + postId, {
+	        fetch('http://200.58.126.100:3000/posts/' + postId, {
 	          method: 'get',
 	          headers: new Headers({
 	            'Content-Type': 'application/json'
@@ -41043,7 +41042,7 @@
 	    key: 'createPost',
 	    value: function createPost(post) {
 	      var promise = new Promise(function (resolve, reject) {
-	        fetch('http://localhost:3000/posts', {
+	        fetch('http://200.58.126.100:3000/posts', {
 	          method: 'post',
 	          headers: new Headers({
 	            'Content-Type': 'application/json'
@@ -41065,7 +41064,7 @@
 	    key: 'updatePost',
 	    value: function updatePost(postId, post) {
 	      var promise = new Promise(function (resolve, reject) {
-	        fetch('http://localhost:3000/posts/' + postId, {
+	        fetch('http://200.58.126.100:3000/posts/' + postId, {
 	          method: 'put',
 	          headers: new Headers({
 	            'Content-Type': 'application/json'
