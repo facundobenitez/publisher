@@ -42239,7 +42239,7 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      var _this = this;
-	      fetch('http://localhost:3000/groups', {
+	      fetch('http://200.58.126.100:3000/groups', {
 	        method: 'get',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
