@@ -1,0 +1,91 @@
+^((?!Unknown props).)+$
+
+
+
+Cuando conviene poner las cosas en estados o en propiedades?
+
+
+
+Find process running on port
+lsof -i :8000
+1. Create folder structure
+   src/client/app
+   src/client/public
+   src/server
+
+2. Install tools:
+
+  Install Nodejs
+  Install npm
+
+3. Install webpack, babel, npm and react
+  2.1 Installing npm:
+    npm init
+  2.2 Install react:
+    npm install --save react
+    npm install --save react-dom
+  2.3 Install webpack:
+    https://webpack.github.io/docs/tutorials/getting-started/
+    npm install --save-dev webpack
+    sudo npm install webpack-dev-server -g
+  2.3 Install Babel
+    npm install --save-dev babel-loader
+    npm install --save-dev babel-core
+    npm install --save-dev babel-preset-es2015
+    npm install --save-dev babel-preset-react
+
+  2.2.1 Add webpack config file:
+
+---------------------------------------------------------------------
+
+var webpack = require('webpack');
+var path = require('path');
+
+var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
+var APP_DIR = path.resolve(__dirname, 'src/client/app');
+
+var config = {
+  entry: APP_DIR + '/index.jsx',
+  output: {
+    path: BUILD_DIR,
+    filename: 'bundle.js'
+  },
+  module : {
+    loaders : [
+      {
+        test : /\.jsx?/,
+        include : APP_DIR,
+        exclude: /node_modules/,
+        loader : 'babel',
+        query:
+          {
+          presets:['react']
+        }
+      }
+    ]
+  }
+};
+
+module.exports = config;
+
+---------------------------------------------------------------------
+3. Create index.html
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scheduled Publishing</title>
+  </head>
+  <body>
+    <div id="app">
+    <script src="public/bundle.js" type="text/javascript"></script>
+    </div>
+  </body>
+</html>
+
+* NICE FORMS
+http://www.htmlgoodies.com/tutorials/forms/article.php/3888746/HTML-Forms-From-Basics-to-Style-Layouts.htm
+* GET JSON DATA
+http://mediatemple.net/blog/tips/loading-and-using-external-data-in-react/
+http://stackoverflow.com/questions/20035101/no-access-control-allow-origin-header-is-present-on-the-requested-resource

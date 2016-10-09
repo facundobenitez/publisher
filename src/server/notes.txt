@@ -1,0 +1,16 @@
+https://coderwall.com/p/gbhjeq/posting-to-facebook-groups-all-at-once-using-ruby
+https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension
+https://goldplugins.com/documentation/wp-social-pro-documentation/how-to-get-an-app-id-and-secret-key-from-facebook/
+
+
+1. The client ask the user to grant permissions on facebook.
+2. Facebook responds with a token
+3. The client send s token to the server
+4. The server uses this token and ask facebook to provide another token with a longer life (60 days)
+5. The server can now use that token to get the groups and perform post on user behalf.
+
+CORS
+https://demisx.github.io/rails-api/2014/02/18/configure-accept-headers-cors.html
+
+PAPERCLIP: UPLOAD WITH 
+http://www.munocreative.com/nerd-notes/justpayme

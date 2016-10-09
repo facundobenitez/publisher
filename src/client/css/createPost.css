@@ -1,0 +1,24 @@
+.post-small-image {
+  width: 100px;
+}
+.post-large-image {
+  width: 190px;
+}
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+
+table {
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+table td {
+    border: 1px solid #ccc;
+}
+table td.absorbing-column {
+    width: 100%;
+}
