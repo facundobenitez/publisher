@@ -40539,7 +40539,7 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      var _this = this;
-	      fetch('http://localhost:3000/posts', {
+	      fetch('http://200.58.126.100:3000/posts', {
 	        method: 'get',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -40581,7 +40581,7 @@
 	    key: '_deletePost',
 	    value: function _deletePost(postId) {
 	      var _this = this;
-	      fetch('http://localhost:3000/posts/' + postId, {
+	      fetch('http://200.58.126.100:3000/posts/' + postId, {
 	        method: 'delete',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -40781,7 +40781,7 @@
 	                _react2.default.createElement(
 	                  'td',
 	                  null,
-	                  _react2.default.createElement(_reactBootstrap.Image, { className: 'post-small-image', src: 'http://localhost:3000' + post.small_image_url })
+	                  _react2.default.createElement(_reactBootstrap.Image, { className: 'post-small-image', src: 'http://200.58.126.100:3000' + post.small_image_url })
 	                ),
 	                _react2.default.createElement(
 	                  'td',
@@ -41129,7 +41129,7 @@
 	      _this.state = {
 	        title: props.post.title,
 	        body: props.post.body,
-	        large_image_url: 'http://localhost:3000' + props.post.large_image_url
+	        large_image_url: 'http://200.58.126.100:3000' + props.post.large_image_url
 	      };
 	    } else {
 	      _this.state = {
