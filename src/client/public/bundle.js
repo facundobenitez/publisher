@@ -40430,7 +40430,7 @@
 	        groups: groups,
 	        frecuency_value: frecuency_value
 	      };
-	      fetch('http://localhost:3000/tasks/create_tasks', {
+	      fetch('http://200.58.126.100:3000/tasks/create_tasks', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -40448,7 +40448,7 @@
 	    key: 'getTasks',
 	    value: function getTasks() {
 	      var promise = new Promise(function (resolve, reject) {
-	        fetch('http://localhost:3000/tasks', {
+	        fetch('http://200.58.126.100:3000/tasks', {
 	          method: 'get',
 	          headers: new Headers({
 	            'Content-Type': 'application/json'
@@ -40467,7 +40467,7 @@
 	    key: 'deleteTask',
 	    value: function deleteTask(taskId) {
 	      var promise = new Promise(function (resolve, reject) {
-	        fetch('http://localhost:3000/tasks/' + taskId, {
+	        fetch('http://200.58.126.100:3000/tasks/' + taskId, {
 	          method: 'delete',
 	          headers: new Headers({
 	            'Content-Type': 'application/json'
